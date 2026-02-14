@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.pageTitle {
+    text-align: center;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.title {
+    font-family: $font-secondary;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $text-dark;
+}
+
+.subtitle {
+    color: $text-medium;
+}

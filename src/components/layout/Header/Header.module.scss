@@ -1,0 +1,148 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $bg-grey;
+    padding: 40px;
+    @include flex-between;
+
+    @include tablet {
+        padding: 30px;
+    }
+    
+    @include mobile {
+        padding: 20px;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    
+    @include tablet {
+        gap: 20px;
+    }
+
+    &List {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: $text-darkest;
+        font-weight: $font-weight-medium;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            gap: 30px;
+        }
+    }
+
+    &Link {
+        &:hover {
+            text-decoration: underline; 
+        }
+    }
+}
+
+.navActions {
+    display: flex;
+    gap: 32px;
+
+    @include tablet {
+        gap: 24px;
+    }
+    
+    @include mobile {
+        gap: 20px;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.burgerButton {
+    display: none;
+    
+    @include mobile {
+        display: block;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    
+    @include transition(opacity 0.5s, visibility 0.5s, background-color 0.5s);
+    
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.5); // конечное значение
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 400px;
+    background-color: $bg-purple;
+    z-index: 1001;
+    transform: translateX(100%);
+    @include transition(transform);
+    overflow-y: auto;
+    box-shadow: $shadow-xl;
+    
+    &.open {
+        transform: translateX(0);
+    }
+
+    &Header {
+        @include flex-between;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .icon {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &List {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &Item {
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    &Link {
+        color: $text-white;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-md;
+        
+        &:hover {
+            text-decoration: underline; 
+        }
+    }
+}

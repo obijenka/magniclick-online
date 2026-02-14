@@ -1,0 +1,48 @@
+// Миксины для медиа-запросов
+@mixin mobile {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Миксины для flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Миксин для переходов
+@mixin transition($properties...) {
+  transition: $properties $transition-base;
+}
+
+@mixin section-min-height {
+  min-height: calc(100vh - 106px);
+  
+  @include tablet {
+    min-height: calc(100vh - 86px);
+  }
+  
+  @include mobile {
+    min-height: calc(100vh - 64px);
+  }
+}

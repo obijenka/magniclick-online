@@ -1,0 +1,89 @@
+// Основные цвета бренда
+$primary-pink: #B94599;       
+$primary-purple: #312783;       
+$primary-grey: #878593;    
+$primary-grey-slate: #6B7C8D;       
+$primary-grey-dark: #575568;       
+
+// Фоны
+$bg-white: #ffffff;                
+$bg-grey: #E7E7E9;             
+$bg-purple: #312783;            
+
+// Системные цвета
+$success-color: #10b981;       // Успех
+$error-color: #ef4444;         // Ошибка
+$warning-color: #f59e0b;       // Предупреждение
+$info-color: #3b82f6;          // Информация
+
+// Шрифты
+$font-primary: 'Montserrat', 'Arial', sans-serif;    
+$font-secondary: 'Merriweather', 'Georgia', serif;
+
+// Веса шрифтов
+$font-weight-regular: 400;   
+$font-weight-medium: 500;       
+$font-weight-bold: 700; 
+
+// Размеры шрифтов
+$font-size-xs: 12px;        
+$font-size-sm: 14px;        
+$font-size-base: 16px;      
+$font-size-md: 18px;           
+$font-size-lg: 20px;           
+$font-size-xl: 24px;           
+$font-size-xxl: 32px;          
+$font-size-xxxl: 48px;
+
+// Цвета шрифтов
+$text-darkest: #27243D;    // grey9
+$text-dark: #3F3D52;       // grey8
+$text-medium: #575568;     // grey7
+$text-light: #9F9EA9;      // grey4
+$text-lightest: #B7B6BE;   // grey3
+// $text-ultra-light: #F5F5F7; // grey2
+$text-white-light: #FAFAFC; // grey1
+$text-white: #FFFFFF;
+
+// Межстрочный интервал
+$line-height-large: 63px;
+$line-height-base: 21px; 
+$line-height-small: 13px;
+
+// ===== МЕЖБУКВЕННЫЕ ИНТЕРВАЛЫ =====  
+$letter-spacing-wide: 1.1px;     
+$letter-spacing-wider: 1.5px;     
+
+// ===== РАЗМЕРЫ И ОТСТУПЫ =====
+// Отступы
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-xxxl: 64px;
+
+// Контейнеры
+$container-width: 1200px;      // Максимальная ширина контента
+$header-height: 80px;          // Высота шапки
+
+// ===== ТЕНИ =====
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+$shadow-xxl: 0 25px 45px rgba(0, 0, 0, 0.25);
+
+// ===== АНИМАЦИИ =====
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// ===== БРЕЙКПОИНТЫ =====
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;

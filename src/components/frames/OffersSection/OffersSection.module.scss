@@ -1,0 +1,77 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.offersWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include tablet {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.offersCard {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border-radius: 5px;
+    padding: 56px 0px 48px 40px;
+    position: relative;
+
+    @include tablet {
+        width: calc(50% - 12px);
+        height: 360px;
+        padding: 40px 0px 32px 32px;
+    }
+
+    &Image {
+        width: 100%;
+        height: 186px;
+        margin-bottom: 24px;
+        box-shadow: $shadow-lg;
+        object-fit: fill;
+
+        @include tablet {
+            height: 160px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &Title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+    }
+
+    &DiscountPrice {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+    }
+
+    &Prices {
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        @include tablet {
+            bottom: 32px;
+            left: 32px;
+            gap: 6px;
+        }
+    }
+
+    &OldPrice {
+        color: $text-white-light;
+        text-decoration: line-through;
+    }
+}

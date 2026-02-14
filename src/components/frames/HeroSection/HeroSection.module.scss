@@ -1,0 +1,193 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.hero {
+  @include section-min-height;
+  padding-top: 70px;
+  position: relative;
+
+  @include tablet {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: $bg-grey;
+    z-index: -10;
+  }
+
+  &Content {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    @include tablet {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      gap: 30px;
+    }
+
+    @include mobile {
+      gap: 24px;
+    }
+  }
+
+  &Title {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxxl;
+    font-family: $font-secondary;
+    color: $text-dark;
+    line-height: $line-height-large;
+    letter-spacing: $letter-spacing-wide;
+
+    @include tablet {
+      font-size: $font-size-xxl;
+      line-height: $line-height-base;
+    }
+
+    @include mobile {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &Line {
+    background-color: $text-light;
+    width: 170px;
+    height: 1px;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &Text {
+    color: $text-medium;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-wide;
+
+    @include mobile {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &Image {
+    width: 75%;
+    height: 70vh;
+    background-image: url("../../../assets/hero/hero-bg.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: calc((100vw - 980px) / -2);
+    z-index: 1;
+
+    @include desktop {
+      width: 62%;
+    }
+
+    @include tablet {
+      position: static;
+      width: 100%;
+      height: 60vh;
+    }
+
+    @include mobile {
+      height: 65vh;
+    }
+  }
+
+  &Overlay {
+    background-color: $bg-purple;
+    padding: 48px 128px;
+    display: flex;
+    gap: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+
+    @include desktop {
+      padding: 40px 80px;
+    }
+
+    @include tablet {
+      position: static;
+      width: 100%;
+      padding: 30px 40px;
+      gap: 60px;
+    }
+
+    @include mobile {
+      padding: 24px 20px;
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    &Item {
+      position: relative;
+      display: flex;
+      max-width: 100px;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      flex: 1;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      @include mobile {
+        align-items: center;
+        text-align: center;
+      }
+
+      &:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 120px;
+        background-color: $bg-white;
+        opacity: 0.8;
+
+        @include tablet {
+          left: -30px;
+          height: 80px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    &Icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    &Title {
+      font-family: $font-secondary;
+      font-size: $font-size-md;
+      line-height: $line-height-base;
+      letter-spacing: $letter-spacing-wider;
+      color: $text-white;
+    }
+  }
+}

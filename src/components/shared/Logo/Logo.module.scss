@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.logo {
+    display: inline-block;
+
+    &Link {
+        text-decoration: none;
+        display: block;
+    }
+
+    &Svg {
+        display: block;
+        @include transition(filter);
+
+        width: 168px;
+        height: 26px;
+
+        @include mobile {
+            width: 140px;
+            height: 22px;
+        }
+    }
+
+    &--white {
+        .logoSvg {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
