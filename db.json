@@ -1,0 +1,32 @@
+{
+  "inspiration": [
+    {
+      "id": "1",
+      "title": "Magniclick",
+      "description": "Ребята из компании X попробовали в действии наши магниты",
+      "image": "/images/inspiration/inspiration1.jpg",
+      "likes": 523
+    },
+    {
+      "id": "2",
+      "title": "Creative Studio",
+      "description": "Как творческая студия использует маркерные доски",
+      "image": "/images/inspiration/inspiration2.jpg",
+      "likes": 635
+    },
+    {
+      "id": "3",
+      "title": "School 21",
+      "description": "Образовательный проект внедрил наши доски",
+      "image": "/images/inspiration/inspiration3.jpg",
+      "likes": 944
+    },
+    {
+      "id": "4",
+      "title": "Coworking Space",
+      "description": "Коворкинг заиграл новыми красками",
+      "image": "/images/inspiration/inspiration4.jpg",
+      "likes": 768
+    }
+  ]
+}
