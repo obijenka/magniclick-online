@@ -30,6 +30,12 @@
   align-items: center;
 }
 
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
 // Миксин для переходов
 @mixin transition($properties...) {
   transition: $properties $transition-base;

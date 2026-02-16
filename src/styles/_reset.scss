@@ -11,6 +11,14 @@
 	box-sizing: border-box;
 }
 
+*:focus,
+*:active,
+*:focus-visible,
+*:active:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Body */
 html {
   scroll-behavior: smooth;
@@ -106,4 +114,12 @@ legend {
 
 input[type='file'] {
 	max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
 }

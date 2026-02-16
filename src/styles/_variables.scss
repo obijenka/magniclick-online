@@ -1,6 +1,7 @@
 // Основные цвета бренда
 $primary-pink: #B94599;       
-$primary-purple: #312783;       
+$primary-purple: #312783;
+$primary-purple-dark: #241D60;       
 $primary-grey: #878593;    
 $primary-grey-slate: #6B7C8D;       
 $primary-grey-dark: #575568;       
@@ -26,6 +27,7 @@ $font-weight-medium: 500;
 $font-weight-bold: 700; 
 
 // Размеры шрифтов
+$font-size-2xs: 10px;        
 $font-size-xs: 12px;        
 $font-size-sm: 14px;        
 $font-size-base: 16px;      
@@ -38,7 +40,8 @@ $font-size-xxxl: 48px;
 // Цвета шрифтов
 $text-darkest: #27243D;    // grey9
 $text-dark: #3F3D52;       // grey8
-$text-medium: #575568;     // grey7
+$text-medium-dark: #575568;     // grey7
+$text-medium: #878593;     // grey5
 $text-light: #9F9EA9;      // grey4
 $text-lightest: #B7B6BE;   // grey3
 // $text-ultra-light: #F5F5F7; // grey2

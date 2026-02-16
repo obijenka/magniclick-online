@@ -1,0 +1,186 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.footer {
+  background-color: $primary-purple;
+  padding: 80px 0;
+
+  a:hover {
+      text-decoration: underline;
+    }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &Grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-end;
+      gap: 40px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &Column {
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &Logo {
+    margin-bottom: 46px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &Nav {
+    @include flex-column(24px);
+    margin-bottom: 24px;
+  }
+
+  &Title {
+    text-transform: uppercase;
+    font-size: $spacing-md;
+    font-weight: $font-weight-medium;
+    margin-bottom: 12px;
+
+    &Line {
+      width: 72px;
+      height: 0.5px;
+      background-color: rgba(193, 190, 218, 1);
+    }
+  }
+
+  &Social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a:hover {
+      filter: brightness(0) invert(1);
+    }
+
+    a img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &ContactInfo {
+    @include flex-column(24px);
+    margin: 46px 0 24px;
+
+    @include mobile {
+      margin: 30px 0 20px;
+      align-items: center;
+    }
+
+    &Item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.requiredNote {
+  font-size: $font-size-2xs;
+  margin: 18px 0 16px;
+
+  @include mobile {
+    margin: 12px 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include mobile {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &Input {
+    padding: 12px 16px;
+    border: 0.5px solid $text-medium;
+    color: $text-light;
+
+    &:focus {
+        border-color: $bg-white;
+        color: $text-white;
+    }
+  }
+}
+
+.agreementBlock {
+  margin-bottom: 56px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+
+  @include mobile {
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+}
+
+.submitButton {
+  padding: 10px 24px;
+  background-color: $primary-purple-dark;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include mobile {
+    max-width: 400px;
+  }
+}
+
+.privacyNote {
+  color: $text-lightest;
+  font-size: $font-size-2xs;
+  line-height: $line-height-small;
+}
+
+.checkbox {
+  width: 100%;
+  max-width: 16px;
+  height: 16px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
