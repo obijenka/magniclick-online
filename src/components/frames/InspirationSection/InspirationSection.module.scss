@@ -17,14 +17,14 @@
     gap: 24px;
 
     @include tablet {
-        flex-wrap: wrap;
-        gap: 32px 24px;
+      flex-wrap: wrap;
+      gap: 32px 24px;
     }
 
     @include mobile {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
     }
   }
 }
@@ -112,6 +112,32 @@
 
 .error {
   color: $error-color;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 22px;
+
+  &Arrow {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:first-child img {
+      transform: rotate(180deg);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      
+      img {
+        opacity: 0.5; 
+      }
+    }
+  }
 }
 
 @keyframes heartPop {

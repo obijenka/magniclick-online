@@ -27,6 +27,34 @@
       "description": "Коворкинг заиграл новыми красками",
       "image": "/images/inspiration/inspiration4.jpg",
       "likes": 768
+    },
+    {
+      "id": "5",
+      "title": "Creative Studio",
+      "description": "Как творческая студия использует маркерные доски",
+      "image": "/images/inspiration/inspiration2.jpg",
+      "likes": 635
+    },
+    {
+      "id": "6",
+      "title": "School 21",
+      "description": "Образовательный проект внедрил наши доски",
+      "image": "/images/inspiration/inspiration3.jpg",
+      "likes": 945
+    },
+    {
+      "id": "7",
+      "title": "Coworking Space",
+      "description": "Коворкинг заиграл новыми красками",
+      "image": "/images/inspiration/inspiration4.jpg",
+      "likes": 768
+    },
+    {
+      "id": "8",
+      "title": "School 21",
+      "description": "Образовательный проект внедрил наши доски",
+      "image": "/images/inspiration/inspiration3.jpg",
+      "likes": 945
     }
   ]
 }

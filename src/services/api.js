@@ -5,7 +5,7 @@ const API = axios.create({
   timeout: 10000,
 });
 
-export const getInspiration = () => API.get('/inspiration');
+export const getInspiration = (page = 1, limit = 4) => API.get(`/inspiration?_page=${page}&_per_page=${limit}`);
 export const updateLikesCount = (id, newCount) => API.patch(`/inspiration/${id}`, { likes: newCount });
 
 export default API;
