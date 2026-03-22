@@ -166,6 +166,11 @@
     transform: scale(1.05);
   }
 
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $primary-grey-dark;
+  }
+
   @include mobile {
     max-width: 400px;
   }
@@ -183,4 +188,9 @@
   height: 16px;
   accent-color: #007bff;
   cursor: pointer;
+}
+
+.errorMessage {
+  color: $error-color;
+  margin-bottom: 8px;
 }
