@@ -47,3 +47,10 @@ git clone https://github.com/your-username/magniclick-online.git
 cd magniclick-online
 npm install
 npm run dev
+```
+### Local JSON Database
+
+To run a local REST API server with mock data:
+
+```bash
+npx json-server --watch db.json --port 3001
